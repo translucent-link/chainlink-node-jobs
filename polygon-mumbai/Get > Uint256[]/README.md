@@ -4,7 +4,7 @@ This job retrieves a list or array of `uint256` integers from a internet-facing 
 
 ## Contract Address & JobID
 
-Contract: [0x1314E350Fc5a3896E2d66C43A83D9391E914a004](https://mumbai.polygonscan.com/address/0x1314E350Fc5a3896E2d66C43A83D9391E914a004)
+Contract: [0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434](https://mumbai.polygonscan.com/address/0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434)
 
 JobID: a56c23c069b446a5bfd3b5fc91383991
 
@@ -25,7 +25,7 @@ Note: use commas not dots for JSON paths.
 
 If you set the following parameters
 
-* get : https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH&tsyms=USD
+* get : https://raw.githubusercontent.com/translucent-link/chainlink-node-jobs/main/polygon-mumbai/Get%20%3E%20Uint256%5B%5D/example.json
 * path : RAW,ETH,USD,PRICES
 
 You will receive a JSON response that may look like this:
