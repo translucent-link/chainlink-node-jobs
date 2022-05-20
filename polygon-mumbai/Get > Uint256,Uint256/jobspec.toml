@@ -1,9 +1,9 @@
 type = "directrequest"
 schemaVersion = 1
-name = "Get > Uint256,Uint256 0.05LINK"
+name = "TL Get > Uint256,Uint256"
 maxTaskDuration = "0s"
 externalJobID = "437d298d-210c-4fff-935d-cedb97ea8011"
-contractAddress = "0x1314E350Fc5a3896E2d66C43A83D9391E914a004"
+contractAddress = "0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434"
 minIncomingConfirmations = 0
 minContractPaymentLinkJuels = 50000000000000000
 observationSource = """
@@ -23,7 +23,7 @@ observationSource = """
                       abi="fulfillOracleRequest2(bytes32 requestId, uint256 payment, address callbackAddress, bytes4 callbackFunctionId, uint256 expiration, bytes calldata data)"
                       data="{\\"requestId\\": $(decode_log.requestId), \\"payment\\": $(decode_log.payment), \\"callbackAddress\\": $(decode_log.callbackAddr), \\"callbackFunctionId\\": $(decode_log.callbackFunctionId), \\"expiration\\": $(decode_log.cancelExpiration), \\"data\\": $(encode_data)}"
                     ]
-    submit_tx    [type="ethtx" to="0x1314E350Fc5a3896E2d66C43A83D9391E914a004" data="$(encode_tx)"]
+    submit_tx    [type="ethtx" to="0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434" data="$(encode_tx)"]
 
     decode_log -> decode_cbor -> fetch -> parseVal1 -> multiplyVal1 -> parseVal2 -> multiplyVal2 -> encode_data -> encode_tx -> submit_tx
 """
