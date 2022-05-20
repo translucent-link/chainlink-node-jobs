@@ -17,12 +17,12 @@ contract GetUint256 is ChainlinkClient, ConfirmedOwner {
 
     event RequestValue(bytes32 indexed requestId, uint256 indexed value);
 
-    string constant jobId = "3bec3d8931614e9aac2eb4a57daaf5ef"; // MUMBAI
+    string constant jobId = "7599d3c8f31e4ce78ad2b790cbcfc673"; // MUMBAI
 
     constructor() ConfirmedOwner(msg.sender) {
         // MUMBAI
         setChainlinkToken(0x326C977E6efc84E512bB9C30f76E30c160eD06FB);
-        setChainlinkOracle(0x1314E350Fc5a3896E2d66C43A83D9391E914a004);
+        setChainlinkOracle(0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434);
     }
 
     function requestValue(

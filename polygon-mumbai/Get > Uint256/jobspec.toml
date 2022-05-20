@@ -1,7 +1,7 @@
 type = "directrequest"
 schemaVersion = 1
-name = "Get > Uint256 0.05LINK"
-externalJobID = "9ee6d657-668a-4ccf-aaab-03b73c703fc6"
+name = "TL Get > Uint256"
+externalJobID = "7599d3c8-f31e-4ce7-8ad2-b790cbcfc673"
 maxTaskDuration = "0s"
 contractAddress = "0xb59989B4d435f9d5380BFee68Ee654b4802b4D46"
 minIncomingConfirmations = 0

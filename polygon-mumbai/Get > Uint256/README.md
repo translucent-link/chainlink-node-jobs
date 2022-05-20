@@ -4,9 +4,9 @@ This job retrieves a `uint256` integer from a internet-facing JSON API.
 
 ## Contract Address & JobID
   
-Contract: [0x1314E350Fc5a3896E2d66C43A83D9391E914a004](https://mumbai.polygonscan.com/address/0x1314E350Fc5a3896E2d66C43A83D9391E914a004)
+Contract: [0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434](https://mumbai.polygonscan.com/address/0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434)
 
-JobID: 9ee6d657668a4ccfaaab03b73c703fc6
+JobID: 7599d3c8f31e4ce78ad2b790cbcfc673
 
 ## Parameters
 
