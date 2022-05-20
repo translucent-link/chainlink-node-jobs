@@ -4,9 +4,9 @@ This job retrieves a variable-length string from an internet-facing JSON API.
 
 ## Contract Address & JobID
 
-Contract: [0x1314E350Fc5a3896E2d66C43A83D9391E914a004](https://mumbai.polygonscan.com/address/0x1314E350Fc5a3896E2d66C43A83D9391E914a004)
+Contract: [0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434](https://mumbai.polygonscan.com/address/0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434)
 
-JobID: 490d815cbbb74a0db1d17e7aae3deb84
+JobID: a84b561bd8f64300a0832682f208321f
 
 ## Parameters
 
