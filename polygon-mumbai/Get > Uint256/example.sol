@@ -29,7 +29,7 @@ contract GetUint256 is ChainlinkClient, ConfirmedOwner {
         string memory _url,
         int256 _multiply,
         string memory _path
-    ) public onlyOwner {
+    ) public onlyOwner returns (bytes32 requestId) {
         Chainlink.Request memory req = buildChainlinkRequest(
             stringToBytes32(jobId),
             address(this),
@@ -38,7 +38,7 @@ contract GetUint256 is ChainlinkClient, ConfirmedOwner {
         req.add("get", _url);
         req.add("path", _path);
         req.addInt("multiply", _multiply);
-        sendOperatorRequest(req, ORACLE_PAYMENT);
+        return sendChainlinkRequest(req, ORACLE_PAYMENT);
     }
 
     function fulfillValue(bytes32 _requestId, uint256 _value)
