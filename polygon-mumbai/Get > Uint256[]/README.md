@@ -43,3 +43,9 @@ You will receive a JSON response that may look like this:
 The job populated with the example parameters above would return with: `[2045, 2062, 1955, 2453]`
 
 See [example.sol](example.sol) for an example client contract.
+
+## Troubleshooting
+
+1. Please make sure you load your client contract, e.g. example.sol, with enough LINK, otherwise you'll get a "Gas estimation failed" error.
+2. The contract address and jobId mentioned above are specific to the network and won't work on other networks.
+3. Please find us in our [Discord](https://discord.gg/2bSBwJDJ) if you're stuck and needing help. 
