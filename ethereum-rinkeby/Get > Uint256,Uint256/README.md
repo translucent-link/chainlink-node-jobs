@@ -30,7 +30,7 @@ If you set the following parameters
 * get : https://min-api.cryptocompare.com/data/pricemultifull?fsyms=ETH&tsyms=USD
 * path1 : RAW,ETH,USD,HIGHDAY
 * path2 : RAW,ETH,USD,LOWDAY
-* price : 100
+* multiply : 100
 
 Note: use commas not dots for JSON paths.
 
