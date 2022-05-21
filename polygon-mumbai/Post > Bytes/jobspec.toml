@@ -1,7 +1,7 @@
 type = "directrequest"
 schemaVersion = 1
-name = "TL Post > Uint256"
-externalJobID = "fc2ecbc2-f58f-45c4-868d-3959850df8c3"
+name = "TL Post > Bytes"
+externalJobID = "15504b13-12d5-469f-b92c-abdc3d46c2ae"
 maxTaskDuration = "0s"
 contractAddress = "0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434"
 minIncomingConfirmations = 0
@@ -15,13 +15,16 @@ observationSource = """
     decode_cbor  [type="cborparse" data="$(decode_log.data)"]
     post         [type="http" method=POST url="$(decode_cbor.post)" requestData="$(decode_cbor.requestData)"]
     parse        [type="jsonparse" path="$(decode_cbor.path)" data="$(post)"]
-    multiply     [type="multiply" input="$(parse)" times="$(decode_cbor.multiply)"]
-    encode_data  [type="ethabiencode" abi="(uint256 value)" data="{ \\"value\\": $(multiply) }"]
-    encode_tx    [type="ethabiencode"
-                  abi="fulfillOracleRequest(bytes32 requestId, uint256 payment, address callbackAddress, bytes4 callbackFunctionId, uint256 expiration, bytes32 data)"
-                  data="{\\"requestId\\": $(decode_log.requestId), \\"payment\\": $(decode_log.payment), \\"callbackAddress\\": $(decode_log.callbackAddr), \\"callbackFunctionId\\": $(decode_log.callbackFunctionId), \\"expiration\\": $(decode_log.cancelExpiration), \\"data\\": $(encode_data)}"
-                 ]
+    encode_large [type="ethabiencode"
+                abi="(bytes32 requestId, bytes _data)"
+                data="{\\"requestId\\": $(decode_log.requestId), \\"_data\\": $(parse)}"
+                ]
+    encode_tx  [type="ethabiencode"
+                abi="fulfillOracleRequest2(bytes32 requestId, uint256 payment, address callbackAddress, bytes4 callbackFunctionId, uint256 expiration, bytes calldata data)"
+                data="{\\"requestId\\": $(decode_log.requestId), \\"payment\\":   $(decode_log.payment), \\"callbackAddress\\": $(decode_log.callbackAddr), \\"callbackFunctionId\\": $(decode_log.callbackFunctionId), \\"expiration\\": $(decode_log.cancelExpiration), \\"data\\": $(encode_large)}"
+                ]
+
     submit_tx    [type="ethtx" to="0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434" data="$(encode_tx)"]
 
-    decode_log -> decode_cbor -> post -> parse -> multiply -> encode_data -> encode_tx -> submit_tx
+    decode_log -> decode_cbor -> post -> parse  -> encode_large -> encode_tx -> submit_tx
 """

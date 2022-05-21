@@ -4,7 +4,7 @@ This job retrieves a variable-length string after posting to an internet-facing 
 
 ## Contract Address & JobID
   
-Contract: [0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434](https://rinkeby.etherscan.io/address/0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434)
+Contract: [0xf71775b3640D7034466e0321E35c5CFB78fd212F](https://rinkeby.etherscan.io/address/0xf71775b3640D7034466e0321E35c5CFB78fd212F)
 
 JobID: fc2ecbc2f58f45c4868d3959850df8c3
 
