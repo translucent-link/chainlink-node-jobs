@@ -35,7 +35,7 @@ contract PostUint256 is ChainlinkClient, ConfirmedOwner {
             "requestData",
             '{"email": "info@translucent.link", "anInteger": 2008}'
         );
-        req.add("path", "json,anIteger");
+        req.add("path", "json,anInteger");
         req.addInt("multiply", 100);
         return sendChainlinkRequest(req, ORACLE_PAYMENT);
     }

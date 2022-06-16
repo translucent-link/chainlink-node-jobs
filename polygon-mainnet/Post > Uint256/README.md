@@ -67,4 +67,4 @@ See [example.sol](example.sol) for an example client contract.
 
 1. Please make sure you load your client contract, e.g. example.sol, with enough LINK, otherwise you'll get a "Gas estimation failed" error.
 2. The contract address and jobId mentioned above are specific to the network and won't work on other networks.
-3. Please find us in our [Discord](https://discord.gg/2bSBwJDJ) if you're stuck and needing help. 
+3. Please find us in our [Discord](https://discord.gg/JxKT6R9Xpz) if you're stuck and needing help. 
