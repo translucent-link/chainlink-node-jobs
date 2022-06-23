@@ -17,5 +17,7 @@ Our public jobs are currently available on the following networks:
 
 * Ethernet Rinkeby
 * Ethernet Kovan
+* Ethernet Goerli
 * Polygon Mumbai
 * Polygon Mainnet
+* BSC Test
