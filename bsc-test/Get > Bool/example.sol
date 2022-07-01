@@ -1,5 +1,4 @@
 // SPDX-License-Identifier: MIT
-// Deployed Rinkeby @ 0xBeCBf3ccC03592979dD032d7d60f77c409095e0A
 pragma solidity ^0.8.7;
 
 import "@chainlink/contracts/src/v0.8/ChainlinkClient.sol";
