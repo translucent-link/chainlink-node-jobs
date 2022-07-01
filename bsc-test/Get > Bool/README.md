@@ -1,4 +1,4 @@
-# Get > Uint256
+# Get > Bool
 
 This job retrieves a `bool` from a internet-facing JSON API.
 
