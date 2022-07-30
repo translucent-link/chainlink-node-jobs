@@ -15,8 +15,8 @@ We currently make available the following public jobs:
 ## Networks
 Our public jobs are currently available on the following networks:
 
+* Ethernet Mainnet
 * Ethernet Rinkeby
-* Ethernet Kovan
 * Ethernet Goerli
 * Polygon Mumbai
 * Polygon Mainnet
