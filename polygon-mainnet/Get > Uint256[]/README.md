@@ -19,7 +19,7 @@ Note: use commas not dots for JSON paths.
 
 ## Price
 
-0.07 LINK
+0.1 LINK
 
 ## Example
 

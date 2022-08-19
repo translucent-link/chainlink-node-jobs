@@ -12,7 +12,7 @@ contract GenericLargeResponse is ChainlinkClient {
     // variable bytes returned in a single oracle response
     bytes public data;
     string public stringData;
-    uint256 private constant ORACLE_PAYMENT = (LINK_DIVISIBILITY / 100) * 7; // 0.07LINK
+    uint256 private constant ORACLE_PAYMENT = (LINK_DIVISIBILITY / 10) * 1; // 0.1LINK
 
     string constant jobId = "a84b561bd8f64300a0832682f208321f";
 

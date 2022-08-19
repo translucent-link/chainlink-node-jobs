@@ -10,7 +10,7 @@ import "@chainlink/contracts/src/v0.8/ConfirmedOwner.sol";
 contract PostUint256 is ChainlinkClient, ConfirmedOwner {
     using Chainlink for Chainlink.Request;
 
-    uint256 private constant ORACLE_PAYMENT = (LINK_DIVISIBILITY / 100) * 7; // 0.07LINK
+    uint256 private constant ORACLE_PAYMENT = (LINK_DIVISIBILITY / 10) * 1; // 0.1LINK
 
     uint256 public value;
 
@@ -19,7 +19,7 @@ contract PostUint256 is ChainlinkClient, ConfirmedOwner {
     string constant jobId = "fc2ecbc2f58f45c4868d3959850df8c3";
 
     constructor() ConfirmedOwner(msg.sender) {
-        // RINKEBY
+        // POLYGON MAINNET
         setChainlinkToken(0x01BE23585060835E02B77ef475b0Cc51aA1e0709);
         setChainlinkOracle(0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434);
     }

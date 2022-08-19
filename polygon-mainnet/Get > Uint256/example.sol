@@ -11,7 +11,7 @@ import "@chainlink/contracts/src/v0.8/ConfirmedOwner.sol";
 contract GetUint256 is ChainlinkClient, ConfirmedOwner {
     using Chainlink for Chainlink.Request;
 
-    uint256 private constant ORACLE_PAYMENT = (LINK_DIVISIBILITY / 100) * 7; // 0.07LINK
+    uint256 private constant ORACLE_PAYMENT = (LINK_DIVISIBILITY / 10) * 1; // 0.1LINK
 
     uint256 public value;
 
