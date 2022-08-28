@@ -1,6 +1,7 @@
 {
   "values": {
     "trueValue": true,
-    "falseValue": false
+    "falseValue": false,
+    "numberValue": 1234.56
   }
 }
