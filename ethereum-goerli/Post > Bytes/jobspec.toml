@@ -13,7 +13,7 @@ observationSource = """
                   topics="$(jobRun.logTopics)"]
 
     decode_cbor  [type="cborparse" data="$(decode_log.data)"]
-    post         [type="http" method=POST url="$(decode_cbor.post)" requestData="$(decode_cbor.requestData)"]
+    post         [type="http" method=POST url="$(decode_cbor.post)" requestData="$(decode_cbor.requestData)" allowUnrestrictedNetworkAccess="true"]
     parse        [type="jsonparse" path="$(decode_cbor.path)" data="$(post)"]
     encode_large [type="ethabiencode"
                 abi="(bytes32 requestId, bytes _data)"

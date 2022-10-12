@@ -11,18 +11,17 @@ import "@chainlink/contracts/src/v0.8/ConfirmedOwner.sol";
 contract GetUint256 is ChainlinkClient, ConfirmedOwner {
     using Chainlink for Chainlink.Request;
 
-    uint256 private constant ORACLE_PAYMENT =
-        ((1 * LINK_DIVISIBILITY) / 100) * 5;
+    uint256 private constant ORACLE_PAYMENT = 0;
     uint256 public value;
 
     event RequestValue(bytes32 indexed requestId, uint256 indexed value);
 
-    string constant jobId = "7599d3c8f31e4ce78ad2b790cbcfc673"; // BSC Test
+    bytes32 constant jobId = "7599d3c8f31e4ce78ad2b790cbcfc673"; // ARBITRUM-RINKEBY
 
     constructor() ConfirmedOwner(msg.sender) {
-        // BSC Test
-        setChainlinkToken(0x84b9B910527Ad5C03A9Ca831909E21e236EA7b06);
-        setChainlinkOracle(0x4246103C6fF2e3eC839751156b518d066aab5e5A);
+        // ARBITRUM-RINKEBY
+        setChainlinkToken(0x615fBe6372676474d9e6933d310469c9b68e9726);
+        setChainlinkOracle(0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434);
     }
 
     function requestValue(
@@ -31,7 +30,7 @@ contract GetUint256 is ChainlinkClient, ConfirmedOwner {
         string memory _path
     ) public onlyOwner returns (bytes32 requestId) {
         Chainlink.Request memory req = buildChainlinkRequest(
-            stringToBytes32(jobId),
+            jobId,
             address(this),
             this.fulfillValue.selector
         );
@@ -47,21 +46,5 @@ contract GetUint256 is ChainlinkClient, ConfirmedOwner {
     {
         emit RequestValue(_requestId, _value);
         value = _value;
-    }
-
-    function stringToBytes32(string memory source)
-        private
-        pure
-        returns (bytes32 result)
-    {
-        bytes memory tempEmptyStringTest = bytes(source);
-        if (tempEmptyStringTest.length == 0) {
-            return 0x0;
-        }
-
-        assembly {
-            // solhint-disable-line no-inline-assembly
-            result := mload(add(source, 32))
-        }
     }
 }
