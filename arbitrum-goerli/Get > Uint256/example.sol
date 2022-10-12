@@ -16,11 +16,11 @@ contract GetUint256 is ChainlinkClient, ConfirmedOwner {
 
     event RequestValue(bytes32 indexed requestId, uint256 indexed value);
 
-    bytes32 constant jobId = "7599d3c8f31e4ce78ad2b790cbcfc673"; // ARBITRUM-RINKEBY
+    bytes32 constant jobId = "7599d3c8f31e4ce78ad2b790cbcfc673"; // ARBITRUM-GOERLI
 
     constructor() ConfirmedOwner(msg.sender) {
-        // ARBITRUM-RINKEBY
-        setChainlinkToken(0x615fBe6372676474d9e6933d310469c9b68e9726);
+        // ARBITRUM-Goerli
+        setChainlinkToken(0xd14838A68E8AFBAdE5efb411d5871ea0011AFd28);
         setChainlinkOracle(0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434);
     }
 

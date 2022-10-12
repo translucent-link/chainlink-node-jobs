@@ -26,7 +26,7 @@ Note: use commas not dots for JSON paths.
 
 If you set the following parameters
 
-* get : https://raw.githubusercontent.com/translucent-link/chainlink-node-jobs/main/polygon-mumbai/Get%20%3E%20Bool/example.json
+* get : https://raw.githubusercontent.com/translucent-link/chainlink-node-jobs/main/polygon-mainnet/Get%20%3E%20Bool/example.json
 * path : values,trueValue
 
 Note: use commas not dots for JSON paths.

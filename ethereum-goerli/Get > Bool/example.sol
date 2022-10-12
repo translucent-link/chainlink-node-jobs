@@ -10,8 +10,7 @@ import "@chainlink/contracts/src/v0.8/ConfirmedOwner.sol";
 contract GetBool is ChainlinkClient, ConfirmedOwner {
     using Chainlink for Chainlink.Request;
 
-    uint256 private constant ORACLE_PAYMENT =
-        ((1 * LINK_DIVISIBILITY) / 100) * 5;
+    uint256 private constant ORACLE_PAYMENT = 0;
     bool public value;
 
     event RequestValue(bytes32 indexed requestId, bool indexed value);
@@ -19,7 +18,7 @@ contract GetBool is ChainlinkClient, ConfirmedOwner {
     string constant jobId = "a75ebb6e5a7b492fbfb67ab240100a95"; //MUMBAI
 
     constructor() ConfirmedOwner(msg.sender) {
-        // ETH Mainnet
+        // Goerli
         setChainlinkToken(0x514910771AF9Ca656af840dff83E8264EcF986CA);
         setChainlinkOracle(0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434);
     }

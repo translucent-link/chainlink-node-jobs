@@ -11,13 +11,13 @@ We currently make available the following public jobs:
 * Get > Bytes - retrieve a variable length string
 * Post > Uint256 - send a payload to an API and retrieve a uint256
 * Post > Bytes - send a payload to an API and retrieve a string
+* Get > Bool - retrieve a boolean value
 
 ## Networks
 Our public jobs are currently available on the following networks:
 
 * Ethernet Mainnet
-* Ethernet Rinkeby
 * Ethernet Goerli
-* Polygon Mumbai
 * Polygon Mainnet
-* BSC Test
+* Arbitrum Mainnet
+* Arbitrum Goerli

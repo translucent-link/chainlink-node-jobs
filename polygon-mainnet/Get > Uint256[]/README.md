@@ -25,7 +25,7 @@ Note: use commas not dots for JSON paths.
 
 If you set the following parameters
 
-* get : https://raw.githubusercontent.com/translucent-link/chainlink-node-jobs/main/polygon-mumbai/Get%20%3E%20Uint256%5B%5D/example.json
+* get : https://raw.githubusercontent.com/translucent-link/chainlink-node-jobs/main/polygon-mainnet/Get%20%3E%20Uint256%5B%5D/example.json
 * path : RAW,ETH,USD,PRICES
 
 You will receive a JSON response that may look like this:
