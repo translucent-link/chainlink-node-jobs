@@ -21,7 +21,7 @@ contract GetUint256 is ChainlinkClient, ConfirmedOwner {
     constructor() ConfirmedOwner(msg.sender) {
         // ARBITRUM-Goerli
         setChainlinkToken(0xd14838A68E8AFBAdE5efb411d5871ea0011AFd28);
-        setChainlinkOracle(0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434);
+        setChainlinkOracle(0x2362A262148518Ce69600Cc5a6032aC8391233f5);
     }
 
     function requestValue(

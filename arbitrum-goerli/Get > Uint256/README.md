@@ -4,7 +4,7 @@ This job retrieves a `uint256` integer from a internet-facing JSON API.
 
 ## Contract Address & JobID
   
-Contract: [0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434](https://arbiscan.io/address/0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434)
+Contract: [0x2362A262148518Ce69600Cc5a6032aC8391233f5](https://arbiscan.io/address/0x2362A262148518Ce69600Cc5a6032aC8391233f5)
 
 JobID: 7599d3c8f31e4ce78ad2b790cbcfc673
 
