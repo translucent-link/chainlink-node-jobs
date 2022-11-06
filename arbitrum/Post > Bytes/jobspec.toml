@@ -3,9 +3,9 @@ schemaVersion = 1
 name = "TL Post > Bytes"
 externalJobID = "15504b13-12d5-469f-b92c-abdc3d46c2ae"
 maxTaskDuration = "0s"
-contractAddress = "0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434"
+contractAddress = "0x78075387A6ef71FE0F036f22f1Dc6Ea68C9c3FA1"
 minIncomingConfirmations = 0
-minContractPaymentLinkJuels = 50000000000000000
+minContractPaymentLinkJuels = 100000000000000000
 observationSource = """
     decode_log   [type="ethabidecodelog"
                   abi="OracleRequest(bytes32 indexed specId, address requester, bytes32 requestId, uint256 payment, address callbackAddr, bytes4 callbackFunctionId, uint256 cancelExpiration, uint256 dataVersion, bytes data)"
@@ -24,7 +24,7 @@ observationSource = """
                 data="{\\"requestId\\": $(decode_log.requestId), \\"payment\\":   $(decode_log.payment), \\"callbackAddress\\": $(decode_log.callbackAddr), \\"callbackFunctionId\\": $(decode_log.callbackFunctionId), \\"expiration\\": $(decode_log.cancelExpiration), \\"data\\": $(encode_large)}"
                 ]
 
-    submit_tx    [type="ethtx" to="0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434" data="$(encode_tx)"]
+    submit_tx    [type="ethtx" to="0x78075387A6ef71FE0F036f22f1Dc6Ea68C9c3FA1" data="$(encode_tx)"]
 
     decode_log -> decode_cbor -> post -> parse  -> encode_large -> encode_tx -> submit_tx
 """

@@ -4,7 +4,7 @@ This job retrieves a variable-length string after posting to an internet-facing 
 
 ## Contract Address & JobID
   
-Contract: [0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434](https://arbiscan.io/address/0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434)
+Contract: [0x78075387A6ef71FE0F036f22f1Dc6Ea68C9c3FA1](https://arbiscan.io/address/0x78075387A6ef71FE0F036f22f1Dc6Ea68C9c3FA1)
 
 JobID: 15504b1312d5469fb92cabdc3d46c2ae
 

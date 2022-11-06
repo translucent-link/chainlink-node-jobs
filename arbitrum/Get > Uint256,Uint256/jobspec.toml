@@ -3,9 +3,9 @@ schemaVersion = 1
 name = "TL Get > Uint256,Uint256"
 maxTaskDuration = "0s"
 externalJobID = "437d298d-210c-4fff-935d-cedb97ea8011"
-contractAddress = "0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434"
+contractAddress = "0x78075387A6ef71FE0F036f22f1Dc6Ea68C9c3FA1"
 minIncomingConfirmations = 0
-minContractPaymentLinkJuels = 50000000000000000
+minContractPaymentLinkJuels = 100000000000000000
 observationSource = """
     decode_log   [type="ethabidecodelog"
                   abi="OracleRequest(bytes32 indexed specId, address requester, bytes32 requestId, uint256 payment, address callbackAddr, bytes4 callbackFunctionId, uint256 cancelExpiration, uint256 dataVersion, bytes data)"
@@ -13,7 +13,7 @@ observationSource = """
                   topics="$(jobRun.logTopics)"]
 
     decode_cbor     [type="cborparse" data="$(decode_log.data)"]
-    fetch           [type="http" method=GET url="$(decode_cbor.get)"]
+    fetch           [type="http" method=GET url="$(decode_cbor.get)" allowUnrestrictedNetworkAccess="true"]
     parseVal1       [type="jsonparse" path="$(decode_cbor.path1)" data="$(fetch)"]
     parseVal2       [type="jsonparse" path="$(decode_cbor.path2)" data="$(fetch)"]
     multiplyVal1   [type="multiply" input="$(parseVal1)" times="$(decode_cbor.multiply)"]
@@ -23,7 +23,7 @@ observationSource = """
                       abi="fulfillOracleRequest2(bytes32 requestId, uint256 payment, address callbackAddress, bytes4 callbackFunctionId, uint256 expiration, bytes calldata data)"
                       data="{\\"requestId\\": $(decode_log.requestId), \\"payment\\": $(decode_log.payment), \\"callbackAddress\\": $(decode_log.callbackAddr), \\"callbackFunctionId\\": $(decode_log.callbackFunctionId), \\"expiration\\": $(decode_log.cancelExpiration), \\"data\\": $(encode_data)}"
                     ]
-    submit_tx    [type="ethtx" to="0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434" data="$(encode_tx)"]
+    submit_tx    [type="ethtx" to="0x78075387A6ef71FE0F036f22f1Dc6Ea68C9c3FA1" data="$(encode_tx)"]
 
     decode_log -> decode_cbor -> fetch -> parseVal1 -> multiplyVal1 -> parseVal2 -> multiplyVal2 -> encode_data -> encode_tx -> submit_tx
 """
