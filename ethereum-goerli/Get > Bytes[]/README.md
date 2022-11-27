@@ -1,6 +1,6 @@
-# Get > Uint256[]
+# Get > Bytes[]
 
-This job retrieves a list or array of `uint256` integers from a internet-facing JSON API.
+This job retrieves a list or array of `bytes` (strings) from a internet-facing JSON API.
 
 ## Contract Address & JobID
 
@@ -25,27 +25,37 @@ Note: use commas not dots for JSON paths.
 
 If you set the following parameters
 
-* get : https://raw.githubusercontent.com/translucent-link/chainlink-node-jobs/main/ethereum-goerli/Get%20%3E%20Uint256%5B%5D/example.json
-* path : RAW,ETH,USD,PRICES
+* get : https://raw.githubusercontent.com/translucent-link/chainlink-node-jobs/main/ethereum-goerli/Get%20%3E%20Bytes%5B%5D/example.json
+* path : calendar,months
 
 You will receive a JSON response that may look like this:
 
     {
-      "RAW": {
-        "ETH": {
-          "USD": {
-            "PRICES": [2045.32, 2062.1, 1955.32, 2453.22]
-          }
-        }
+      "calendar": {
+        "months": [
+          "January",
+          "February",
+          "March",
+          "April",
+          "May",
+          "June",
+          "July",
+          "August",
+          "September",
+          "October",
+          "November",
+          "December"
+        ]
       }
     }
 
-The job populated with the example parameters above would return with: `[2045, 2062, 1955, 2453]`
+The job populated with the example parameters above would return with: `[January, February.... December]`
 
 See [example.sol](example.sol) for an example client contract.
 
 ## Troubleshooting
 
-1. Please make sure you load your client contract, e.g. example.sol, with enough LINK, otherwise you'll get a "Gas estimation failed" error.
-2. The contract address and jobId mentioned above are specific to the network and won't work on other networks.
-3. Please find us in our [Discord](https://discord.gg/JxKT6R9Xpz) if you're stuck and needing help. 
+1. You can convert `bytes` to `string` using `const str = string(mybytes);` 
+2. Please make sure you load your client contract, e.g. example.sol, with enough LINK, otherwise you'll get a "Gas estimation failed" error.
+3. The contract address and jobId mentioned above are specific to the network and won't work on other networks.
+4. Please find us in our [Discord](https://discord.gg/JxKT6R9Xpz) if you're stuck and needing help. 
