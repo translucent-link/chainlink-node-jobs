@@ -21,3 +21,4 @@ Our public jobs are currently available on the following networks:
 * Polygon Mainnet
 * Arbitrum Mainnet
 * Arbitrum Goerli
+* Optimism Mainnet

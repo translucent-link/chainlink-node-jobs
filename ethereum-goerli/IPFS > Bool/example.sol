@@ -15,11 +15,11 @@ contract IpfsBool is ChainlinkClient, ConfirmedOwner {
 
     event RequestValue(bytes32 indexed requestId, bool indexed value);
 
-    string constant jobId = "cb8fb6d6a55243838424d91b412daf61";
+    bytes32 constant jobId = "cb8fb6d6a55243838424d91b412daf61";
 
     constructor() ConfirmedOwner(msg.sender) {
         // Goerli
-        setChainlinkToken(0x514910771AF9Ca656af840dff83E8264EcF986CA);
+        setChainlinkToken(0x326C977E6efc84E512bB9C30f76E30c160eD06FB);
         setChainlinkOracle(0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434);
     }
 
@@ -29,7 +29,7 @@ contract IpfsBool is ChainlinkClient, ConfirmedOwner {
         returns (bytes32 requestId)
     {
         Chainlink.Request memory req = buildChainlinkRequest(
-            stringToBytes32(jobId),
+            jobId,
             address(this),
             this.fulfillValue.selector
         );
