@@ -26,9 +26,12 @@ The following jobs all retrieve a piece of JSON data from IPFS by specificying a
 ## Networks
 Our public jobs are currently available on the following networks:
 
+### Mainnets
 * Ethernet Mainnet
-* Ethernet Goerli
 * Polygon Mainnet
 * Arbitrum Mainnet
-* Arbitrum Goerli
 * Optimism Mainnet
+
+### Testnets
+* Ethernet Goerli
+* Arbitrum Goerli
