@@ -23,7 +23,7 @@ contract GenericLargeResponse is ChainlinkClient {
      */
     constructor() {
         // GOERLI
-        setChainlinkToken(0x326c977e6efc84e512bb9c30f76e30c160ed06fb);
+        setChainlinkToken(0x326C977E6efc84E512bB9C30f76E30c160eD06FB);
         setChainlinkOracle(0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434);
     }
 
