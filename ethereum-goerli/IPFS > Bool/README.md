@@ -1,4 +1,4 @@
-# Get > Bool
+# IPFS > Bool
 
 This job retrieves a `bool` from an IPFS content source identified by a content identifier.
 

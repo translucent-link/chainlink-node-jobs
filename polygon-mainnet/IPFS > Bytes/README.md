@@ -1,4 +1,4 @@
-# Get > Bytes
+# IPFS > Bytes
 
 This job retrieves a variable-length string from an IPFS content source identified by a content identifier.
 
