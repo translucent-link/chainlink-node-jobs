@@ -4,7 +4,7 @@ This job retrieves a list or array of `uint256` integers from a internet-facing 
 
 ## Contract Address & JobID
 
-Contract: [0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434](https://mumbai.polygonscan.com/address/0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434)
+Contract: [0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434](https://polygonscan.com/address/0x188b71C9d27cDeE01B9b0dfF5C1aff62E8D6F434)
 
 JobID: a56c23c069b446a5bfd3b5fc91383991
 
