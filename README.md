@@ -12,8 +12,6 @@ We currently make available the following public jobs:
 * Post > Uint256 - send a payload to an API and retrieve a uint256
 * Post > Bytes - send a payload to an API and retrieve a string
 * Get > Bool - retrieve a boolean value
-
-Temporarily unavailable:
 * Get > Uint256[] - retrieve a list of uint256, e.g. fetch a series of prices
 
 ### IPFS Jobs
