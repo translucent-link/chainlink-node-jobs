@@ -17,7 +17,7 @@ The job requires the following parameters to be specified:
 
 ## Price
 
-0.05 LINK
+1.62 LINK
 
 ## Example
 

@@ -6,7 +6,7 @@ This job retrieves a `bool` from a internet-facing JSON API.
   
 Contract: [0x78075387A6ef71FE0F036f22f1Dc6Ea68C9c3FA1](https://arbiscan.io/address/0x78075387A6ef71FE0F036f22f1Dc6Ea68C9c3FA1)
 
-JobID: 7599d3c8f31e4ce78ad2b790cbcfc673
+JobID: a75ebb6e5a7b492fbfb67ab240100a95
 
 ## Parameters
 

@@ -10,7 +10,7 @@ import "@chainlink/contracts/src/v0.8/ConfirmedOwner.sol";
 contract GetUint256 is ChainlinkClient, ConfirmedOwner {
     using Chainlink for Chainlink.Request;
 
-    uint256 private constant ORACLE_PAYMENT = 1360000000000000000; // 1.36LINK
+    uint256 private constant ORACLE_PAYMENT = 1350000000000000000; // 1.35LINK
     uint256 public value;
 
     event RequestValue(bytes32 indexed requestId, uint256 indexed value);
